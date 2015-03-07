@@ -1,4 +1,4 @@
-			<!-- footer -->
+    	<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
 				<!-- copyright -->
@@ -10,9 +10,6 @@
 
 			</footer>
 			<!-- /footer -->
-
-		</div>
-		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
 

@@ -1,6 +1,9 @@
-<?php get_header(); ?>
+<?php include (TEMPLATEPATH . '/header.php'); ?>
 
-	<main role="main">
+<main class="cd-main-content">
+    <div class="cd-scrolling-bg cd-color-4">
+      <div class="cd-container">
+
 	<!-- section -->
 	<section>
 
@@ -64,8 +67,9 @@
 
 	</section>
 	<!-- /section -->
-	</main>
 
-<?php get_sidebar(); ?>
+      </div>
+    </div>
+  </main>
 
-<?php get_footer(); ?>
+<?php include (TEMPLATEPATH . '/page-landing-footer.php'); ?>

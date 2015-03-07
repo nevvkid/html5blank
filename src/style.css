@@ -32,249 +32,277 @@
  * modules/mixins
  * ---
  */
-/**
- * modules/fonts
- * ---
- * Declare fonts here
- */
-/*
-@font-face {
-  font-family: "Font-Name";
-  src: url("fonts/font-name.eot");
-  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"),
-    url("fonts/font-name.woff") format("woff"),
-    url("fonts/font-name.ttf") format("truetype"),
-    url("fonts/font-name.svg#font-name") format("svg");
-  font-weight: normal;
-  font-style: normal;
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-*/
-/**
- * partials/reset
- * ---
- * Reset file
- * NOTE: also `normalize.css` is used
- */
-*,
-*:after,
-*:before {
+
+*, *:after, *:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-  -webkit-tap-highlight-color: transparent;
-}
-
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
-  font-size: 140%;
-  line-height: 1.5;
-  color: #444;
-  background-color: #fff;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #3d3536;
+  background-color: #ffffff;
 }
 
-img {
-  max-width: 100%;
-  vertical-align: middle;
+body, html {
+  /* important */
+  height: 100%;
 }
 
 a {
-  color: #444;
+  color: #b4d7a8;
   text-decoration: none;
 }
-a:focus, a:hover {
-  text-decoration: underline;
-}
 
-input[type="text"],
-input[type="search"] {
-  font-size: inherit;
-  line-height: inherit;
-}
+/* --------------------------------
 
-::-moz-selection {
-  background-color: #04A4CC;
-  color: #fff;
-  text-shadow: none;
-}
+Modules - reusable parts of our design
 
-::selection {
-  background-color: #04A4CC;
-  color: #fff;
-  text-shadow: none;
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
 }
-
-/**
- * partials/wordpress
- * ---
- * Wordpess core classes
- */
-/**
- * Alignment
- */
-.alignnone {
-  margin: 5px 15px 15px 0;
-}
-
-.aligncenter {
-  display: block;
-  margin: 5px auto;
-}
-
-.alignright {
-  float: right;
-  margin: 5px 0 20px 20px;
-  margin: 5px 0 15px 15px;
-}
-
-.alignleft {
-  float: left;
-  margin: 5px 15px 15px 0;
-}
-
-/**
- * Gallery & images
- */
-.wp-caption {
-  background: #fff;
-  border: thin solid #F0F0F0;
-  max-width: 95%;
-  padding: 5px 5px;
-  text-align: center;
-}
-.wp-caption img {
-  width: auto;
-  max-width: 98.5%;
-  height: auto;
-  border: 0 none;
-  padding: 0;
-  margin: 0;
-}
-
-.wp-caption .wp-caption-text,
-.gallery-caption {
-  margin: 0;
-  padding: 0 5px 5px;
-  font-size: 140%;
-  line-height: 1.5;
-}
-
-/**
- * partials/utils
- * ---
- * Utils classes
- */
-.clear:before, .clear:after {
-  content: " ";
+.cd-container::after {
+  /* clearfix */
+  content: '';
   display: table;
-}
-.clear:after {
   clear: both;
 }
 
-.reset-box {
-  padding: 0;
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+.cd-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.cd-header::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-header #cd-logo {
+  float: left;
+  margin: 10px 0 0 5%;
+}
+.cd-header #cd-logo img {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .cd-header {
+    height: 70px;
+  }
+  .cd-header #cd-logo {
+    margin: 20px 0 0 5%;
+  }
+}
+
+.cd-main-nav {
+  float: right;
+  margin-right: 5%;
+  width: 44px;
+  height: 100%;
+  background: url("img/cd-icon-menu.svg") no-repeat center center;
+  background-size: 44px 44px;
+  cursor: pointer;
+}
+.cd-main-nav ul {
+  position: absolute;
   margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.cd-main-nav ul.is-visible {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+}
+.cd-main-nav a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 5%;
+  background: #2f292a;
+  border-top: 1px solid #453c3d;
+  color: #8e7d7f;
+}
+@media only screen and (min-width: 768px) {
+  .cd-main-nav {
+    width: auto;
+    height: auto;
+    background: none;
+    cursor: auto;
+  }
+  .cd-main-nav ul {
+    position: static;
+    width: auto;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    line-height: 70px;
+  }
+  .cd-main-nav ul.is-visible {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .cd-main-nav li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  .cd-main-nav a {
+    display: inline-block;
+    height: auto;
+    line-height: normal;
+    background: transparent;
+    padding: .6em 1em;
+    border-top: none;
+    color: #3d3536;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+  .no-touch .cd-main-nav a:hover {
+    color: #99a478;
+  }
 }
 
-/**
- * partials/wrapper
- * ---
- */
-.wrapper {
-  max-width: 1280px;
-  padding: 0 15px;
-  margin: 0 auto;
+.cd-main-content {
+  /* you need to assign a min-height to the main content so that the children can inherit it*/
+  height: 100%;
   position: relative;
+  z-index: 1;
 }
 
-/**
- * partials/header
- * ---
- */
-/**
- * partials/nav
- * ---
- * Menus
- */
-/**
- * partials/sidebar
- * ---
- */
-/**
- * partials/footer
- * ---
- */
-/**
- * partials/print
- * ---
- * Print version
- * (from https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css)
- */
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster: h5bp.com/s */
-    box-shadow: none !important;
-    text-shadow: none !important;
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.cd-fixed-bg .cd-intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+}
+.cd-fixed-bg .cd-intro h1, .cd-fixed-bg .cd-intro h2 {
+  text-align: center;
+  font-size: 40px;
+  font-size: 2.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+.cd-fixed-bg .cd-referral {
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 80px;
+  width: 90%;
+  max-width: 768px;
+  text-align: center;
+  color: #ffffff;
+}
+.cd-fixed-bg .cd-referral h3 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("img/page-landing/rendering2.jpg");
+}
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("img/page-landing/cd-background-2.jpg");
+}
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("img/page-landing/cd-background-3.jpg");
+}
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("img/page-landing/cd-background-4.jpg");
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 36px;
   }
-
-  a,
-  a:visited {
-    text-decoration: underline;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
   }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
   }
+}
 
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group;
-    /* h5bp.com/t */
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
+.cd-scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.cd-scrolling-bg.cd-color-1 {
+  background-color: #3d3536;
+  color: #444;
+}
+.cd-scrolling-bg.cd-color-2 {
+  background-color: #99a478;
+  color: #3d3536;
+}
+.cd-scrolling-bg.cd-color-3 {
+  background-color: #b4d7a8;
+  color: #3d3536;
+}
+.cd-scrolling-bg .cd-footer-landing {
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 20px;
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .cd-scrolling-bg {
+    padding: 8em 0;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
   }
 }
