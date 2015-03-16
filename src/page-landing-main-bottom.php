@@ -8,8 +8,8 @@
 
     <div class="cd-scrolling-bg cd-color-1">
       <div class="cd-container">
-        <?php if( have_rows('grid_item') ): ?>
         <div class="grid-items-lines">
+        <?php if( have_rows('grid_item') ): ?>
           <?php while( have_rows('grid_item') ): the_row();
 
           // vars
