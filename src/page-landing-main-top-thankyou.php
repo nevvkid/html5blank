@@ -1,5 +1,5 @@
 <main class="cd-main-content">
-    <div class="cd-scrolling-bg cd-color-4">
+    <div class="cd-scrolling-bg cd-color-1">
       <div class="cd-container">
 
       <h1>Danke für dein Interesse!</h1>

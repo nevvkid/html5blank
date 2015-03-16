@@ -7,6 +7,9 @@
 // Bourbon
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
+// Bourbon
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
+
 // Modules
 @import "modules/variables";
 @import "modules/mixins";
@@ -55,7 +58,7 @@ Modules - reusable parts of our design
 -------------------------------- */
 
 .cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-  width: 90%;
+  width: 100%;
   max-width: $L; // breakpoints inside partials > _layout.scss
   margin: 0 auto;
 
@@ -200,6 +203,7 @@ Main components
     @include font-size(40px);
     text-shadow: 0 1px 3px rgba(#000, .3);
     color: $color-4;
+    font-weight: 300;
     }
   }
 
@@ -222,18 +226,6 @@ Main components
     background-image: url('img/page-landing/rendering2.jpg');
   }
 
-  &.cd-bg-2 {
-    background-image: url('img/page-landing/cd-background-2.jpg');
-  }
-
-  &.cd-bg-3 {
-    background-image: url('img/page-landing/cd-background-3.jpg');
-  }
-
-  &.cd-bg-4 {
-    background-image: url('img/page-landing/cd-background-4.jpg');
-  }
-
   @include MQ(M) {
     h1, h2 {
       font-size: 36px;
@@ -245,7 +237,6 @@ Main components
 
     h1, h2 {
       font-size: 48px;
-      font-weight: 300;
     }
   }
 }
@@ -253,24 +244,14 @@ Main components
 .cd-scrolling-bg {
   position: relative;
   min-height: 100%;
-  padding: 4em 0;
+  padding: 0;
   line-height: 1.6;
   box-shadow: 0 0 50px rgba(#000, .5);
   z-index: index($bg-elements, scrolling-bg); // see partials > _variables.scss
 
   &.cd-color-1 {
-    background-color: $color-1;
+    background-color: $body-bg;
     color: $text-color;
-  }
-
-  &.cd-color-2 {
-    background-color: $color-2;
-    color: $color-1;
-  }
-
-  &.cd-color-3 {
-    background-color: $color-3;
-    color: $color-1;
   }
 
   .cd-footer-landing {
@@ -283,9 +264,116 @@ Main components
   }
 
   @include MQ(M) {
-    padding: 8em 0;
+    padding: 0;
     @include font-size(20px);
     line-height: 2;
     font-weight: 300;
   }
 }
+
+
+// grid items with lines
+
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.grid-items-lines {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-background-color: white !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+
+  p {
+    line-height: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $grid-items-background: $base-background-color;
+  $grid-item-background: $base-background-color;
+  $grid-item-border: 1px solid transparentize($base-font-color, 0.8);
+  $grid-item-columns: 6;
+  $grid-item-color: $base-font-color;
+  $grid-item-height: 14em;
+
+  @include clearfix;
+  position: relative;
+
+  .grid-item {
+    @include transition (all 0.2s ease-in-out);
+    background: $grid-item-background;
+    border-bottom: $grid-item-border;
+    border-right: $grid-item-border;
+    cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    overflow: hidden;
+    outline: none;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    &:focus,
+    &:hover {
+      background: transparentize($grid-item-color, 0.95);
+    }
+  }
+
+  .grid-item img {
+      display: block;
+      height: 2.5em;
+      margin-bottom: 1.2em;
+      margin: auto;
+      opacity: 0.2;
+    }
+
+  .grid-item h1 {
+      color: $grid-item-color;
+      font-size: 1.3em;
+      margin-bottom: 0.4em;
+    }
+
+  .grid-item p {
+      margin: auto;
+      color: transparentize($grid-item-color, 0.4);
+
+      @include media($medium-screen) {
+        max-width: 70%;
+      }
+    }
+
+  // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
+  .bottom-cover {
+    background: $grid-items-background;
+    bottom: 0px;
+    height: 3px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .right-cover {
+    background: $grid-items-background;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    width: 4px;
+  }
+}
+
+
+
+
+
+
+
