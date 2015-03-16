@@ -2,5 +2,5 @@
     <div class="cd-scrolling-bg cd-color-1">
       <div class="cd-container">
 
-      <h1>Danke für dein Interesse!</h1>
-      <p>1. Hilf uns noch mehr Interessenten zu erreichen und spare durch das Teilen bis zu 50%!<br>2. In der Zwischenzeit haben wir Dir eine Email gesendet. Sichere Dir Deinen Rabatt durch einen Klick auf den darin enthaltenen Link.</p>
+      <h1><?php the_field('referral_-_thank_you_-_headline'); ?></h1>
+      <p><?php the_field('referral_-_thank_you_-_copytext'); ?></p>
