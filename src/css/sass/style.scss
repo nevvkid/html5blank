@@ -15,6 +15,9 @@
 @import "modules/mixins";
 @import "modules/layout";
 
+@import "partials/forms";
+@import "partials/buttons";
+
 // My Style
 
 /* --------------------------------
@@ -250,8 +253,8 @@ Main components
   z-index: index($bg-elements, scrolling-bg); // see partials > _variables.scss
 
   &.cd-color-1 {
-    background-color: $body-bg;
-    color: $text-color;
+    background-color: $base-background-color;
+    color: $base-font-color;
   }
 
   .cd-footer-landing {
@@ -280,7 +283,6 @@ Main components
 
 .grid-items-lines {
   ///////////////////////////////////////////////////////////////////////////////////
-  $base-background-color: white !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
