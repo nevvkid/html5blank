@@ -179,11 +179,6 @@ button:disabled {
   opacity: 0.5;
 }
 
-/* --------------------------------
-
-Primary style
-
--------------------------------- */
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -287,6 +282,9 @@ Main components
   -webkit-transform: translateY(50px);
   transform: translateY(50px);
 }
+.cd-main-nav li {
+  list-style-type: none;
+}
 .cd-main-nav a {
   display: block;
   height: 50px;
@@ -376,16 +374,45 @@ Main components
   right: auto;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: 80px;
+  bottom: 15px;
   width: 90%;
   max-width: 768px;
   text-align: center;
   color: #ffffff;
 }
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg .cd-referral {
+    bottom: 80px;
+  }
+}
 .cd-fixed-bg .cd-referral h3 {
   font-size: 20px;
   font-size: 1.25rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.cd-fixed-bg .cd-referral .pform label {
+  display: none;
+}
+.cd-fixed-bg .cd-referral .pform input#email {
+  display: inline-block;
+  padding: 0.75em 1em;
+  line-height: 1;
+  width: 90%;
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg .cd-referral .pform input#email {
+    width: 20em;
+    margin-bottom: 0;
+  }
+}
+.cd-fixed-bg .cd-referral .pform button {
+  display: inline-block;
+  width: 90%;
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg .cd-referral .pform button {
+    width: 10em;
+  }
 }
 .cd-fixed-bg.cd-bg-1 {
   background-image: url("img/page-landing/rendering2.jpg");
@@ -409,7 +436,6 @@ Main components
   min-height: 100%;
   padding: 0;
   line-height: 1.6;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 .cd-scrolling-bg.cd-color-1 {

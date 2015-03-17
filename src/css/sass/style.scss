@@ -7,7 +7,7 @@
 // Bourbon
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
-// Bourbon
+// Neat
 @import "../../bower_components/neat/app/assets/stylesheets/neat";
 
 // Modules
@@ -15,18 +15,12 @@
 @import "modules/mixins";
 @import "modules/layout";
 
+// Partials
 @import "partials/typography";
 @import "partials/forms";
 @import "partials/buttons";
 
 // My Style
-
-/* --------------------------------
-
-Primary style
-
--------------------------------- */
-
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -130,6 +124,10 @@ Main components
     }
   }
 
+  li {
+    list-style-type: none;
+  }
+
   a {
     display: block;
     height: $header-height-S;
@@ -214,15 +212,39 @@ Main components
   .cd-referral {
     position: absolute;
     @include center(x);
-    bottom: 80px;
+    bottom: $margin-vertical-large;
     width: 90%;
     max-width: $M;
     text-align: center;
     color: $color-4;
+      @include MQ(M) {
+        bottom: 80px;
+      }
 
     h3 {
     @include font-size(20px);
     text-shadow: 0 1px 3px rgba(#000, .3);
+    }
+
+    .pform {
+      & label {display: none;}
+      & input#email {
+        display: inline-block;
+        padding: 0.75em 1em;
+        line-height: 1;
+        width: 90%;
+        @include MQ(M) {
+          width: 20em;
+          margin-bottom: 0;
+        }
+      }
+      & button {
+        display: inline-block;
+        width: 90%;
+        @include MQ(M) {
+          width: 10em;
+        }
+      }
     }
   }
 
@@ -250,7 +272,6 @@ Main components
   min-height: 100%;
   padding: 0;
   line-height: 1.6;
-  box-shadow: 0 0 50px rgba(#000, .5);
   z-index: index($bg-elements, scrolling-bg); // see partials > _variables.scss
 
   &.cd-color-1 {
@@ -373,10 +394,3 @@ Main components
     width: 4px;
   }
 }
-
-
-
-
-
-
-
