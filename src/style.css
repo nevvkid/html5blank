@@ -36,6 +36,61 @@ html {
  * modules/mixins
  * ---
  */
+body {
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+p {
+  margin: 0 0 0.75em;
+}
+
+a {
+  color: #477dca;
+  text-decoration: none;
+  -webkit-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+a:active, a:focus, a:hover {
+  color: #2c5999;
+}
+a:active, a:focus {
+  outline: none;
+}
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
 input,
 label,
 select {

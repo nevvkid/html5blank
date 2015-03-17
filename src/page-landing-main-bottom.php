@@ -1,9 +1,4 @@
       </div> <!-- cd-referral -->
-      <div class="see-more">
-        <div class="icon">
-        nach unten
-        </div>
-      </div>
     </div> <!-- cd-fixed-bg -->
 
     <div class="cd-scrolling-bg cd-color-1">
