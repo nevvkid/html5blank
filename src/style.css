@@ -390,6 +390,9 @@ Main components
   font-size: 1.25rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
+.cd-fixed-bg .cd-referral .pform {
+  color: #333;
+}
 .cd-fixed-bg .cd-referral .pform label {
   display: none;
 }
@@ -534,4 +537,21 @@ Main components
   position: absolute;
   right: 0px;
   width: 4px;
+}
+
+.response {
+  background-color: #e5edf8;
+  color: #244e87;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+  padding: 0.75em;
+  text-align: center;
+}
+.response a {
+  color: #19375f;
+  text-decoration: underline;
+}
+.response a:focus, .response a:hover {
+  color: #04080e;
 }
