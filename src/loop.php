@@ -1,7 +1,7 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
   <!-- article -->
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
     <div class="article-item">
       <header class="post-header">
         <!-- post title -->
@@ -14,7 +14,7 @@
         <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
       </section>
       <div class="post-meta">
-        <time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>"><?php the_date(); ?> <?php the_time(); ?></time>
+        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date(); ?></time>
       </div>
     </div>
   </article>

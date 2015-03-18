@@ -4,20 +4,24 @@
 
     <main class="cd-main-content" role="main">
       <div class="cd-scrolling-bg cd-color-4">
-        <div class="cd-container blog-post">
+        <div class="cd-container blog-post type-system-serif">
 
-          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="post">
+          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="post-meta">
               <h1 class="post-title">
-                <a href="<?php the_permalink(); ?>" itemprop="url" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                <?php the_title(); ?>
               </h1>
               <div class="cf post-meta-text">
-                <time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>"><?php the_date(); ?> <?php the_time(); ?></time>
+                <p class="date">
+                  <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date(); ?></time>
+                </p>
               </div>
             </div>
             <section class="post-content">
               <?php the_content(); // Dynamic Content ?>
             </section>
+            <hr>
+            <span class="author"><?php the_author(); ?></span>
           </article>
 
           <?php endwhile; ?>

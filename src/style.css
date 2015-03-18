@@ -934,6 +934,10 @@ Main components
   }
 }
 
+.blog, .blog-post {
+  max-width: 768px;
+}
+
 .grid-items-lines {
   position: relative;
 }
@@ -1022,4 +1026,124 @@ Main components
 }
 .response a:focus, .response a:hover {
   color: #04080e;
+}
+
+.type-system-serif article {
+  text-align: left;
+}
+.type-system-serif article h1, .type-system-serif article h2, .type-system-serif article h3, .type-system-serif article p {
+  margin: 0;
+}
+.type-system-serif article hr {
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+.type-system-serif article p {
+  color: #333;
+  line-height: 1.5;
+}
+.type-system-serif article a {
+  color: #477DCA;
+  text-decoration: none;
+}
+.type-system-serif article::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.type-system-serif article .type {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin-bottom: 2em;
+  padding: 0.3em 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+.type-system-serif article h1 {
+  font-family: "Lusitana", serif;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+@media screen and (min-width: 40em) {
+  .type-system-serif article h1 {
+    font-size: 2.6em;
+  }
+}
+.type-system-serif article h2 {
+  font-family: "Merriweather", serif;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin-bottom: 0.9em;
+}
+@media screen and (min-width: 40em) {
+  .type-system-serif article h2 {
+    font-size: 1.2em;
+  }
+}
+.type-system-serif article code {
+  background: #F7F7F7;
+  border-radius: 4.5px;
+  border: 1px solid #E0E0E0;
+  font-family: monaco;
+  font-size: 0.75em;
+  font-style: normal;
+  padding: 0.1em 0.4em;
+  white-space: nowrap;
+}
+.type-system-serif article h3 {
+  font-family: "Lusitana", serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: .4em;
+}
+.type-system-serif article p.date {
+  color: rgba(51, 51, 51, 0.4);
+  font-family: "Merriweather", serif;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 0.3em;
+}
+.type-system-serif article p {
+  font-family: "Merriweather", serif;
+  font-size: 0.9em;
+  line-height: 1.6em;
+  margin-bottom: 1.5em;
+}
+.type-system-serif article p span {
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 700;
+}
+.type-system-serif article a.read-more {
+  display: inline-block;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-left: 0.2em;
+  position: relative;
+  text-transform: uppercase;
+}
+.type-system-serif article a.read-more span {
+  font-family: "Lusitana", serif;
+  font-size: 1.5em;
+  font-style: normal;
+  position: absolute;
+  right: -12px;
+  top: -1px;
+}
+.type-system-serif article hr {
+  width: 3em;
+}
+.type-system-serif article p.author {
+  font-family: "Merriweather", serif;
+  font-style: italic;
 }
