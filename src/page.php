@@ -1,45 +1,36 @@
-<?php get_header(); ?>
+<?php include (TEMPLATEPATH . '/header.php'); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<h1><?php the_title(); ?></h1>
+<main class="cd-main-content" role="main">
+  <div class="cd-scrolling-bg cd-color-4">
+    <div class="cd-container blog-post type-system-serif">
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <div class="post-meta">
+          <h1 class="post-title">
+            <?php the_title(); ?>
+          </h1>
+        </div>
+        <section class="post-content">
+          <?php the_content(); // Dynamic Content ?>
+        </section>
+      </article>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <?php endwhile; ?>
+      <?php else: ?>
 
-				<?php the_content(); ?>
+      <!-- article -->
+      <article>
+        <h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+      </article>
+      <!-- /article -->
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
-
-				<br class="clear">
-
-				<?php edit_post_link(); ?>
-
-			</article>
-			<!-- /article -->
-
-		<?php endwhile; ?>
-
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+      <?php endif; ?>
+    </div> <!-- cd-container -->
+  </div> <!-- cd-scrolling-bg -->
+  <div class="cd-footer">
+    <?php include (TEMPLATEPATH . '/minimal-footer.php'); ?>
+  </div>
+</main> <!-- cd-main-content -->
+<?php include (TEMPLATEPATH . '/page-landing-footer.php'); ?>
