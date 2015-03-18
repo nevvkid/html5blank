@@ -930,13 +930,13 @@ Main components
 }
 
 .thankyou, .blog, .blog-post {
-  margin-top: 100px;
+  margin-top: 60px;
   overflow: hidden;
   padding: 2em;
 }
 @media only screen and (min-width: 768px) {
   .thankyou, .blog, .blog-post {
-    margin-top: 140px;
+    margin-top: 84px;
   }
 }
 

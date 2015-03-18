@@ -312,11 +312,11 @@ Main components
 }
 
 .thankyou, .blog, .blog-post {
-  margin-top: $header-height-S * 2;
+  margin-top: $header-height-S * 1.2;
   overflow: hidden;
   padding: 2em;
   @include MQ(M) {
-  margin-top: $header-height-M * 2;
+  margin-top: $header-height-M * 1.2;
   }
 }
 
