@@ -240,14 +240,23 @@ Main components
       & input#email {
         display: inline-block;
         width: 90%;
+        padding: 0.75em 1em;
+        vertical-align: middle;
+        white-space: nowrap;
         @include MQ(M) {
+          @include border-right-radius(0px);
           width: 20em;
+          margin-bottom: 0;
         }
       }
       & button {
         display: inline-block;
         width: 90%;
+        padding: 0.8em 1em;
+        border: 1px solid $action-color;
+        border-radius: $base-border-radius;
         @include MQ(M) {
+          @include border-left-radius(0px);
           width: 10em;
         }
       }
@@ -299,6 +308,15 @@ Main components
     @include font-size(20px);
     line-height: 2;
     font-weight: 300;
+  }
+}
+
+.thankyou, .blog, .blog-post {
+  margin-top: $header-height-S * 2;
+  overflow: hidden;
+  padding: 2em;
+  @include MQ(M) {
+  margin-top: $header-height-M * 2;
   }
 }
 
