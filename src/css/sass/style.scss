@@ -88,8 +88,8 @@ Main components
   left: 0;
   width: 100%;
   height: $header-height-S;
-  background: rgba($color-4, .95);
-  box-shadow: 0 1px 2px rgba(#000, .2);
+  background: $color-4;
+  border-bottom: $base-border;
   z-index: index($main-elements, navigation); // see partials > _variables.scss
   @include clearfix;
 
@@ -467,6 +467,11 @@ $notice-color: #e5edf8 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
+
+  &.post {
+    padding: 40px 0;
+    border-bottom: 1px solid #f2f2f0;
+  }
 
   h1, h2, h3, p {
     margin: 0;

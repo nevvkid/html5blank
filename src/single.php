@@ -11,17 +11,13 @@
               <h1 class="post-title">
                 <?php the_title(); ?>
               </h1>
-              <div class="cf post-meta-text">
-                <p class="date">
-                  <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date(); ?></time>
-                </p>
-              </div>
             </div>
             <section class="post-content">
               <?php the_content(); // Dynamic Content ?>
             </section>
-            <hr>
-            <span class="author"><?php the_author(); ?></span>
+            <div class="post-meta">
+              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date(); ?></time>
+            </div>
           </article>
 
           <?php endwhile; ?>
