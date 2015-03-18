@@ -14,6 +14,10 @@
 // Neat
 @import "../../bower_components/neat/app/assets/stylesheets/neat";
 
+// pesticide layout debug helper
+$pesticide-debug: true !default;
+//@import "pesticide";
+
 // Modules
 @import "modules/variables";
 @import "modules/mixins";
@@ -23,10 +27,6 @@
 @import "partials/typography";
 @import "partials/forms";
 @import "partials/buttons";
-
-// pesticide layout debug helper
-$pesticide-debug: true !default;
-@import "pesticide";
 
 // My Style
 html * {
@@ -239,12 +239,9 @@ Main components
       & label {display: none;}
       & input#email {
         display: inline-block;
-        padding: 0.75em 1em;
-        line-height: 1;
         width: 90%;
         @include MQ(M) {
           width: 20em;
-          margin-bottom: 0;
         }
       }
       & button {
