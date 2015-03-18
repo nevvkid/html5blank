@@ -902,17 +902,6 @@ Main components
   background-color: #fff;
   color: #333;
 }
-.cd-scrolling-bg .cd-footer-landing {
-  position: absolute;
-  left: 50%;
-  right: auto;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 20px;
-  width: 90%;
-  max-width: 1170px;
-  text-align: center;
-}
 @media only screen and (min-width: 768px) {
   .cd-scrolling-bg {
     padding: 0;
@@ -936,6 +925,17 @@ Main components
 
 .blog, .blog-post {
   max-width: 768px;
+}
+
+.cd-footer {
+  position: relative;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
 }
 
 .grid-items-lines {

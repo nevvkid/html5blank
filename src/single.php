@@ -30,8 +30,10 @@
           <!-- /article -->
 
           <?php endif; ?>
-
-        </div>
+        </div> <!-- cd-container -->
+      </div> <!-- cd-scrolling-bg -->
+      <div class="cd-footer">
+        <?php include (TEMPLATEPATH . '/minimal-footer.php'); ?>
       </div>
-    </main>
+    </main> <!-- cd-main-content -->
     <?php include (TEMPLATEPATH . '/page-landing-footer.php'); ?>

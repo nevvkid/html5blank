@@ -1,4 +1,3 @@
-      <div class="cd-footer-landing">
-        <p>&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-          <a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.</p>
+      <div class="cd-footer-inner">
+        <p>&copy; <?php echo date('Y'); ?> Copyright <strong><?php bloginfo('name'); ?></strong> &ndash; <?php icl_link_to_element(81); ?></p>
       </div>

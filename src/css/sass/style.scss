@@ -295,15 +295,6 @@ Main components
     color: $base-font-color;
   }
 
-  .cd-footer-landing {
-    position: absolute;
-    @include center(x);
-    bottom: 20px;
-    width: 90%;
-    max-width: $L;
-    text-align: center;
-  }
-
   @include MQ(M) {
     padding: 0;
     @include font-size(20px);
@@ -324,6 +315,15 @@ Main components
 .blog, .blog-post {
   max-width: $M;
 }
+
+.cd-footer {
+    position: relative;
+    @include center(x);
+    width: 90%;
+    max-width: $L;
+    text-align: center;
+}
+
 
 
 // grid items with lines
