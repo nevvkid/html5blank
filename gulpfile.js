@@ -27,8 +27,6 @@ var gulp = require( "gulp" ),
 		production: [
 			/** The banner of `style.css` */
 			"src/css/banner.css",
-			/** Normalize */
-			"src/bower_components/normalize.css/normalize.css",
 			/** Theme style */
 			"src/css/style.css"
 		]

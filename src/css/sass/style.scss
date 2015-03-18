@@ -4,6 +4,10 @@
  * Main `sass` file. Import here `sass` files
  */
 
+
+// Normalize.css > already checked for scss version
+@import "../../bower_components/normalize-scss/normalize";
+
 // Bourbon
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
