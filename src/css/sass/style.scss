@@ -313,6 +313,7 @@ Main components
 
 .thankyou {
   margin-top: $header-height-S;
+  padding-top: 0;
   @include MQ(M) {
   margin-top: $header-height-M;
   }
