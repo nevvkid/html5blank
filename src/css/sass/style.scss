@@ -361,7 +361,7 @@ Main components
   $grid-item-border: 1px solid transparentize($base-font-color, 0.8);
   $grid-item-columns: 6;
   $grid-item-color: $base-font-color;
-  $grid-item-height: 14em;
+  $grid-item-height: 16em;
 
   @include clearfix;
   position: relative;
