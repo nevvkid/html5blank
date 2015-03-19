@@ -12,6 +12,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
+    <meta property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' : '; } ?>"/>
+    <meta name="og:type" content="product">
+    <meta property="og:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here."/>
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/page-landing/rendering2.jpg"/>
+    <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>"/>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@zedfy_germany" />
+    <meta name="twitter:title" content="Zedfy is the specialist for digital LEDs, LED Controller and LED Products." />
+    <meta name="twitter:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here.">
+    <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/page-landing/rendering2.jpg" />
+    <meta name="twitter:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
+
+
     <link href='//fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
@@ -35,7 +49,6 @@
     <nav class="cd-main-nav">
     <ul>
       <?php html5blank_nav(); ?>
-      <!--<li><a href="http://www.indiegogo.com">indiegogo</a></li>-->
     </ul>
     </nav> <!-- cd-main-nav -->
   </header>
