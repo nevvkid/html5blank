@@ -1,6 +1,8 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
+		<meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here." />
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' : '; } ?><?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
