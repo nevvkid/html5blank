@@ -42,7 +42,7 @@ html * {
 body {
   font: {
     size: 100%;
-    family: $primary-font; // variables inside partials > _variables.scss
+    family: $base-font-family; // variables inside partials > _variables.scss
   }
   color: $color-1;
   background-color: $color-4;
@@ -503,9 +503,8 @@ $notice-color: #e5edf8 !default;
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $serif: 'Lusitana', serif;
-  $serif-2: 'Merriweather', serif;
-  $sans-serif: 'Merriweather Sans', sans-serif;
+  $serif: 'Merriweather', serif;
+  $sans-serif: $base-font-family;
 
   @include clearfix;
   text-align: left;
@@ -523,7 +522,7 @@ $notice-color: #e5edf8 !default;
   }
 
   h1 {
-    font-family: $serif;
+    font-family: $sans-serif;
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 0.5em;
@@ -534,9 +533,8 @@ $notice-color: #e5edf8 !default;
   }
 
   h2 {
-    font-family: $serif-2;
+    font-family: $sans-serif;
     font-size: 1em;
-    font-style: italic;
     font-weight: 400;
     line-height: 1.6em;
     margin-bottom: 0.9em;
@@ -558,7 +556,7 @@ $notice-color: #e5edf8 !default;
   }
 
   h3 {
-    font-family: $serif;
+    font-family: $sans-serif;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;
@@ -567,14 +565,14 @@ $notice-color: #e5edf8 !default;
 
   p.date {
     color: transparentize($base-font-color, .6);
-    font-family: $serif-2;
+    font-family: $serif;
     font-size: 0.9em;
     font-style: italic;
     margin-bottom: 0.3em;
   }
 
   p {
-    font-family: $serif-2;
+    font-family: $serif;
     font-size: 0.9em;
     line-height: 1.6em;
     margin-bottom: 1.5em;
@@ -609,8 +607,7 @@ $notice-color: #e5edf8 !default;
   }
 
   p.author {
-    font-family: $serif-2;
-    font-style: italic;
+    font-family: $serif;
   }
 }
 

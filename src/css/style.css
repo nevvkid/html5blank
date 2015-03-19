@@ -446,7 +446,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: #333;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 1em;
   line-height: 1.5;
 }
@@ -457,7 +457,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em;
@@ -504,7 +504,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 1em;
 }
 
@@ -527,7 +527,7 @@ textarea {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
@@ -590,7 +590,7 @@ button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 1em;
   font-weight: 600;
   line-height: 1;
@@ -625,7 +625,7 @@ html * {
 
 body {
   font-size: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   color: #3d3536;
   background-color: #ffffff;
 }
@@ -1078,7 +1078,7 @@ Main components
 .type-system-serif article .type {
   border-bottom: 1px solid;
   display: inline-block;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 0.7em;
   font-weight: 700;
   margin-bottom: 2em;
@@ -1087,7 +1087,7 @@ Main components
   text-transform: uppercase;
 }
 .type-system-serif article h1 {
-  font-family: "Lusitana", serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 2em;
   font-weight: 700;
   margin-bottom: 0.5em;
@@ -1098,9 +1098,8 @@ Main components
   }
 }
 .type-system-serif article h2 {
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 1em;
-  font-style: italic;
   font-weight: 400;
   line-height: 1.6em;
   margin-bottom: 0.9em;
@@ -1121,7 +1120,7 @@ Main components
   white-space: nowrap;
 }
 .type-system-serif article h3 {
-  font-family: "Lusitana", serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 1.4em;
   font-weight: 400;
   line-height: 1.3em;
@@ -1141,12 +1140,12 @@ Main components
   margin-bottom: 1.5em;
 }
 .type-system-serif article p span {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-weight: 700;
 }
 .type-system-serif article a.read-more {
   display: inline-block;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 0.8em;
   font-weight: 700;
   margin-left: 0.2em;
@@ -1154,7 +1153,7 @@ Main components
   text-transform: uppercase;
 }
 .type-system-serif article a.read-more span {
-  font-family: "Lusitana", serif;
+  font-family: "Merriweather", serif;
   font-size: 1.5em;
   font-style: normal;
   position: absolute;
@@ -1166,7 +1165,6 @@ Main components
 }
 .type-system-serif article p.author {
   font-family: "Merriweather", serif;
-  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */

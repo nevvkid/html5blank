@@ -2,7 +2,6 @@
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here." />
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' : '; } ?><?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
@@ -13,12 +12,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here.">
 
+    <!-- facebook -->
     <meta property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' : '; } ?>"/>
     <meta name="og:type" content="product">
     <meta property="og:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here."/>
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/page-landing/rendering2.jpg"/>
     <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>"/>
 
+    <!-- twitter card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@zedfy_germany" />
     <meta name="twitter:title" content="Zedfy is the specialist for digital LEDs, LED Controller and LED Products." />
@@ -26,10 +27,7 @@
     <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/page-landing/rendering2.jpg" />
     <meta name="twitter:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
 
-
-    <link href='//fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
 
 		<?php wp_head(); ?>
 		<script>
