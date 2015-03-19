@@ -923,6 +923,15 @@ Main components
   }
 }
 
+.thankyou {
+  margin-top: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .thankyou {
+    margin-top: 70px;
+  }
+}
+
 .blog, .blog-post {
   max-width: 768px;
 }

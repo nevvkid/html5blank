@@ -302,13 +302,19 @@ Main components
     font-weight: 300;
   }
 }
-
 .thankyou, .blog, .blog-post {
   margin-top: $header-height-S * 1.2;
   overflow: hidden;
   padding: 2em;
   @include MQ(M) {
   margin-top: $header-height-M * 1.2;
+  }
+}
+
+.thankyou {
+  margin-top: $header-height-S;
+  @include MQ(M) {
+  margin-top: $header-height-M;
   }
 }
 
