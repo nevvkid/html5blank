@@ -10,7 +10,7 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta name="description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here.">
 
     <meta property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' : '; } ?>"/>
     <meta name="og:type" content="product">
