@@ -43,6 +43,9 @@
 
 	</head>
 	<body <?php body_class(); ?>>
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
   <header class="cd-header">
     <div id="cd-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/zedfy-logo2.svg" alt="Logo" class="logo-img"></a></div>
