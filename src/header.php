@@ -15,7 +15,7 @@
     <!-- facebook -->
     <meta property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' : '; } ?>"/>
     <meta name="og:type" content="product">
-    <meta property="og:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here."/>
+    <meta property="og:description" content="Can´t wait for @Zedfy_Germany to launch. Check out the early bird discounts #zedcon - smart moving #LED #lights!"/>
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/page-landing/rendering2.jpg"/>
     <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>"/>
 
