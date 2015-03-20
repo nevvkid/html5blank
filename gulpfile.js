@@ -9,8 +9,6 @@ var gulp = require( "gulp" ),
 	uglifySrc = [
 		/** Modernizr */
 		"src/bower_components/modernizr/modernizr.js",
-		/** Conditionizr */
-		"src/js/lib/conditionizr-4.3.0.min.js",
 		/** jQuery */
 		"src/bower_components/jquery/dist/jquery.js",
 		/** Page scripts */
@@ -99,15 +97,6 @@ gulp.task( "styles", [ "sass" ], function() {
 		.pipe( gulp.dest( "src" ) );
 });
 
-/** JSHint */
-gulp.task( "jshint", function () {
-	/** Test all `js` files exclude those in the `lib` folder */
-	return gulp.src( "src/js/{!(lib)/*.js,*.js}" )
-		.pipe( $.jshint() )
-		.pipe( $.jshint.reporter( "jshint-stylish" ) )
-		.pipe( $.jshint.reporter( "fail" ) );
-});
-
 /** Templates */
 gulp.task( "template", function() {
 	console.log( "`template` task run in `" + env + "` environment" );
@@ -133,7 +122,7 @@ gulp.task( "envProduction", function() {
 });
 
 /** Livereload */
-gulp.task( "watch", [ "template", "styles", "jshint" ], function() {
+gulp.task( "watch", [ "template", "styles" ], function() {
 	var server = $.livereload();
 
 	/** Watch for livereoad */
@@ -152,8 +141,6 @@ gulp.task( "watch", [ "template", "styles", "jshint" ], function() {
 		"src/css/sass/**/*.scss"
 	], [ "styles" ] );
 
-	/** Watch for JSHint */
-	gulp.watch( "src/js/{!(lib)/*.js,*.js}", ["jshint"] );
 });
 
 /** Build */
@@ -162,7 +149,6 @@ gulp.task( "build", [
 	"clean",
 	"template",
 	"styles",
-	"jshint",
 	"copy",
 	"uglify"
 ], function () {

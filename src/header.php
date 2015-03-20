@@ -30,15 +30,6 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
 
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
-
 	</head>
 	<body <?php body_class(); ?>>
   <!--[if lt IE 8]>

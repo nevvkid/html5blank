@@ -14,7 +14,7 @@
 
         <!-- section -->
         <section>
-        <p class="type">Article Type</p>
+        <p class="type">Blog</p>
 
           <?php get_template_part('loop'); ?>
 

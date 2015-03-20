@@ -6,7 +6,10 @@
 
 
 // Normalize.css > already checked for scss version
-@import "../../bower_components/normalize-scss/normalize";
+//@import "../../bower_components/normalize-scss/normalize";
+
+// meyer reset
+@import "../../bower_components/meyer-reset/stylesheets/meyer-reset";
 
 // Bourbon
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
@@ -142,9 +145,10 @@ Main components
     height: $header-height-S;
     line-height: $header-height-S;
     padding-left: 5%;
-    background: darken($color-1, 5%);
-    border-top: 1px solid lighten($color-1, 3%);
-    color: lighten($color-1, 30%);
+    background: $color-4;
+    border-bottom: $base-border;
+    color: $color-1;
+    text-transform: uppercase;
   }
 
   @include MQ(M) {
@@ -175,12 +179,9 @@ Main components
       line-height: normal;
       background: transparent;
       padding: .6em 1em;
-      border-top: none;
-      color: $color-1;
-      text-transform: uppercase;
+      border-bottom: none;
       font-weight: bold;
       @include font-size(14px);
-
       .no-touch &:hover {
         color: $color-2;
       }
@@ -231,6 +232,10 @@ Main components
       }
 
     h3 {
+      & span.discount {
+        color: $blue;
+        font-weight: bold;
+      }
     @include font-size(20px);
     text-shadow: 0 1px 3px rgba(#000, .3);
     }
@@ -265,7 +270,11 @@ Main components
   }
 
   &.cd-bg-1 {
-    background-image: url('img/page-landing/rendering2.jpg');
+    background-color: $dark-gray;
+    background-image: none;
+    @include MQ(M) {
+      background-image: url('img/page-landing/rendering2.jpg');
+    }
   }
 
   @include MQ(M) {
