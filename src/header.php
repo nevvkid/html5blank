@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@zedfy_germany" />
     <meta name="twitter:title" content="Zedfy is the specialist for digital LEDs, LED Controller and LED Products." />
-    <meta name="twitter:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here.">
+    <meta name="twitter:description" content="Can´t wait for @Zedfy_Germany to launch. Check out the early bird discounts #zedcon - smart moving #LED #lights!">
     <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/page-landing/rendering2.jpg" />
     <meta name="twitter:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
 
