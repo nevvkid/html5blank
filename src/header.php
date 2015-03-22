@@ -27,7 +27,7 @@
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/page-landing/rendering2.jpg"/>
     <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>"/>
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Armata|Merriweather:400,700' rel='stylesheet' type='text/css'>
 
 		<?php wp_head(); ?>
 	</head>

@@ -180,7 +180,7 @@ Main components
       background: transparent;
       padding: .6em 1em;
       border-bottom: none;
-      font-weight: bold;
+      font-weight: normal;
       @include font-size(14px);
       .no-touch &:hover {
         color: $color-2;
@@ -234,7 +234,7 @@ Main components
     h3 {
       & span.discount {
         color: $blue;
-        font-weight: bold;
+        font-weight: normal;
       }
     @include font-size(20px);
     text-shadow: 0 1px 3px rgba(#000, .3);

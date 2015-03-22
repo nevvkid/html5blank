@@ -11,6 +11,3 @@
       <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
       <?php endif; ?>
-
-      <h1><?php the_field('referral_-_thank_you_-_headline'); ?></h1>
-      <p><?php the_field('referral_-_thank_you_-_copytext'); ?></p>
