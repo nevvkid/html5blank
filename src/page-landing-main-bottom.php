@@ -15,7 +15,7 @@
           ?>
 
           <?php if( $image ): ?>
-          <a href="javascript:void(0)" class="grid-item">
+          <a class="grid-item">
             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
             <h1><?php echo $headline; ?></h1>
             <p><?php echo $copytext; ?></p>
