@@ -424,7 +424,7 @@ Main components
     }
 
   .grid-item-big {
-    height: 10em;
+    height: 12em;
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }

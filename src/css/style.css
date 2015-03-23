@@ -650,7 +650,7 @@ Main components
   }
 }
 .grid-items-lines .grid-item-big {
-  height: 10em;
+  height: 12em;
 }
 @media screen and (min-width: 53.75em) {
   .grid-items-lines .grid-item-big {
