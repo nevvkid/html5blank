@@ -232,6 +232,10 @@ Main components
       }
 
     h3 {
+      color: $color-4;
+      @include MQ(M) {
+        color: $dark-gray;
+      }
       & span.discount {
         color: $blue;
         font-weight: normal;
@@ -249,6 +253,7 @@ Main components
         padding: 0.75em 1em;
         vertical-align: middle;
         white-space: nowrap;
+        color: $dark-gray;
         @include MQ(M) {
           @include border-right-radius(0px);
           width: 20em;
