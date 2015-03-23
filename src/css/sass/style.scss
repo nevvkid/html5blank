@@ -228,7 +228,7 @@ Main components
     text-align: center;
     color: $color-4;
       @include MQ(M) {
-        bottom: 80px;
+        bottom: $margin-vertical-large;
       }
 
     h3 {

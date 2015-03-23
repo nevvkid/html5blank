@@ -457,7 +457,7 @@ Main components
 }
 @media only screen and (min-width: 768px) {
   .cd-fixed-bg .cd-referral {
-    bottom: 80px;
+    bottom: 15px;
   }
 }
 .cd-fixed-bg .cd-referral h3 {
