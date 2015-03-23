@@ -5,7 +5,7 @@
       <div class="cd-container">
         <div class="grid-items-lines">
           <a class="grid-item grid-item-big grid-item-image">
-            <h1><?php the_field('secondary_headline'); ?></h1>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/zedcon-logo.svg" alt="Logo" class="logo-img">
             <p><?php the_field('secondary_copytext'); ?></p>
           </a>
 
