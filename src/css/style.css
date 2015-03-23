@@ -654,6 +654,7 @@ Main components
 }
 @media screen and (min-width: 53.75em) {
   .grid-items-lines .grid-item-big {
+    height: 10em;
     width: 100%;
   }
 }
