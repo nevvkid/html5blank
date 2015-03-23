@@ -390,12 +390,15 @@ Main components
     display: inline-block;
     margin-left: 1em;
   }
+  .cd-main-nav li.menu-item-language {
+    margin-left: 0;
+  }
   .cd-main-nav a {
     display: inline-block;
     height: auto;
     line-height: normal;
     background: transparent;
-    padding: 6em 1em;
+    padding: 0.6em 1em;
     border-bottom: none;
     font-weight: normal;
     font-size: 14px;
