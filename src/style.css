@@ -393,7 +393,7 @@ Main components
     display: inline-block;
     margin-left: 1em;
   }
-  .cd-main-nav li .menu-item-language {
+  .cd-main-nav li.menu-item-language {
     margin-left: 0;
   }
   .cd-main-nav a {
@@ -410,7 +410,7 @@ Main components
   .no-touch .cd-main-nav a:hover {
     color: #333333;
   }
-  .cd-main-nav a .menu-item-language {
+  .cd-main-nav a.menu-item-language {
     padding: 6em 0em;
   }
 }
