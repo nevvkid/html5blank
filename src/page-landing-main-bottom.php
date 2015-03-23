@@ -4,6 +4,11 @@
     <div class="cd-scrolling-bg cd-color-1">
       <div class="cd-container">
         <div class="grid-items-lines">
+          <a class="grid-item grid-item-big grid-item-image">
+            <h1><?php the_field('secondary_headline'); ?></h1>
+            <p><?php the_field('secondary_copytext'); ?></p>
+          </a>
+
         <?php if( have_rows('grid_item') ): ?>
           <?php while( have_rows('grid_item') ): the_row();
 

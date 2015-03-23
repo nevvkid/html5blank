@@ -642,6 +642,16 @@ Main components
     max-width: 70%;
   }
 }
+@media screen and (min-width: 53.75em) {
+  .grid-items-lines .grid-item-big {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 40em) {
+  .grid-items-lines .grid-item-big p {
+    max-width: 60%;
+  }
+}
 .grid-items-lines .bottom-cover {
   background: #fff;
   bottom: 0px;

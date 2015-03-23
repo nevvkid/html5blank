@@ -369,6 +369,7 @@ Main components
   $grid-item-background: $base-background-color;
   $grid-item-border: 1px solid transparentize($base-font-color, 0.8);
   $grid-item-columns: 6;
+  $grid-item-big-columns: 12;
   $grid-item-color: $base-font-color;
   $grid-item-height: 16em;
 
@@ -421,6 +422,19 @@ Main components
         max-width: 70%;
       }
     }
+
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }
+    }
+  }
+
+
 
   // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
   .bottom-cover {
