@@ -797,11 +797,11 @@ Main components
   font-weight: 400;
 }
 .type-system-serif article p span {
-  font-family: "Armata", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: 700;
 }
 .type-system-serif article p strong {
-  font-family: "Armata", "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: 700;
 }
 .type-system-serif article a.read-more {
