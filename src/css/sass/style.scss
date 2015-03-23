@@ -171,6 +171,9 @@ Main components
     li {
       display: inline-block;
       margin-left: 1em;
+      &.menu-item-language {
+      margin-left: 0;
+      }
     }
 
     a {
@@ -178,7 +181,7 @@ Main components
       height: auto;
       line-height: normal;
       background: transparent;
-      padding: 6em 1em;
+      padding: 0.6em 1em;
       border-bottom: none;
       font-weight: normal;
       @include font-size(14px);
