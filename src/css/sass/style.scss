@@ -612,8 +612,13 @@ $notice-color: #e5edf8 !default;
     font-size: 0.9em;
     line-height: 1.6em;
     margin-bottom: 1.5em;
+    font-weight: 400;
 
     span {
+      font-family: $sans-serif;
+      font-weight: 700;
+    }
+    strong {
       font-family: $sans-serif;
       font-weight: 700;
     }
