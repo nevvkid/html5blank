@@ -188,9 +188,9 @@ Main components
       .no-touch &:hover {
         color: $color-2;
       }
-      &.menu-item-language {
+    }
+    li.menu-item-language a {
       padding: 0.6em 0em;
-      }
     }
   }
 }

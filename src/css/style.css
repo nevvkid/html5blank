@@ -407,7 +407,7 @@ Main components
   .no-touch .cd-main-nav a:hover {
     color: #333333;
   }
-  .cd-main-nav a.menu-item-language {
+  .cd-main-nav li.menu-item-language a {
     padding: 0.6em 0em;
   }
 }
