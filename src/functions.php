@@ -325,6 +325,23 @@ add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove 
 add_filter('post_thumbnail_html', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
 add_filter('image_send_to_editor', 'remove_width_attribute', 10 ); // Remove width and height dynamic attributes to post images
 
+// Allow svg Images
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+function custom_upload_mimes ( $existing_mimes=array() ) {
+
+    // add the file extension to the array
+
+    $existing_mimes['svg'] = 'mime/type';
+
+        // call the modified list of extensions
+
+    return $existing_mimes;
+
+}
+
+
+
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
