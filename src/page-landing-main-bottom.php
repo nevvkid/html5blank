@@ -5,17 +5,7 @@
       <div class="cd-container">
         <div class="grid-items-lines">
           <a class="grid-item grid-item-big grid-item-image">
-
-            <?php
-
-            $image = get_field('secondary_headline');
-
-            if( !empty($image) ): ?>
-
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-            <?php endif; ?>
-
+            <h1><?php the_field('secondary_headline'); ?></h1>
             <p><?php the_field('secondary_copytext'); ?></p>
           </a>
 
