@@ -30,6 +30,7 @@
     <link href='http://fonts.googleapis.com/css?family=Armata|Merriweather:400,700' rel='stylesheet' type='text/css'>
 
 		<?php wp_head(); ?>
+
 	</head>
 	<body <?php body_class(); ?>>
   <!--[if lt IE 8]>

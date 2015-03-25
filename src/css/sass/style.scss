@@ -284,7 +284,7 @@ Main components
     background-color: $dark-gray;
     background-image: none;
     @include MQ(M) {
-      background-image: url('img/page-landing/zedcon.jpg');
+      background-image: url('../../../uploads/2015/03/intro_image.jpg');
     }
   }
 
