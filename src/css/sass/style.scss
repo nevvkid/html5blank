@@ -435,9 +435,9 @@ Main components
     }
 
   .grid-item-big {
-    height: 16em;
+    height: 12em;
     @include media($large-screen) {
-      height: 14em;
+      height: 10em;
       @include grid-item-columns($grid-item-big-columns);
     }
     p {
