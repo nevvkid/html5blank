@@ -212,9 +212,13 @@ Main components
 
   .cd-intro {
     position: absolute;
-    @include center;
+    @include center(x);
+    top: 6em;
     width: 90%;
     max-width: $L;
+    @include MQ(M) {
+      @include center;
+    }
 
     h1, h2 {
       text-align: center;
@@ -392,7 +396,6 @@ Main components
     background: $grid-item-background;
     border-bottom: $grid-item-border;
     border-right: $grid-item-border;
-    cursor: pointer;
     float: left;
     height: $grid-item-height;
     overflow: hidden;
@@ -403,11 +406,6 @@ Main components
 
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
-    }
-
-    &:focus,
-    &:hover {
-      background: transparentize($grid-item-color, 0.95);
     }
   }
 

@@ -430,16 +430,28 @@ Main components
 .cd-fixed-bg .cd-intro {
   position: absolute;
   left: 50%;
-  top: 50%;
-  bottom: auto;
   right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 6em;
   width: 90%;
   max-width: 1170px;
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg .cd-intro {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 .cd-fixed-bg .cd-intro h1, .cd-fixed-bg .cd-intro h2 {
   text-align: center;
@@ -624,7 +636,6 @@ Main components
   background: #fff;
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   border-right: 1px solid rgba(51, 51, 51, 0.2);
-  cursor: pointer;
   float: left;
   height: 16em;
   overflow: hidden;
@@ -637,9 +648,6 @@ Main components
   .grid-items-lines .grid-item {
     width: 50%;
   }
-}
-.grid-items-lines .grid-item:focus, .grid-items-lines .grid-item:hover {
-  background: rgba(51, 51, 51, 0.05);
 }
 .grid-items-lines .grid-item img {
   display: block;
