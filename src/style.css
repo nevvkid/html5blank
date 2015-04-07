@@ -458,7 +458,27 @@ Main components
   color: #ffffff;
   font-weight: 300;
 }
+.cd-fixed-bg .cd-indiegogo {
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0px;
+  margin-bottom: -6px;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 10000;
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg .cd-indiegogo {
+    bottom: 0px;
+  }
+}
 .cd-fixed-bg .cd-referral {
+  display: none;
   position: absolute;
   left: 50%;
   right: auto;

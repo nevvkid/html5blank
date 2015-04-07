@@ -229,7 +229,23 @@ Main components
     }
   }
 
+  .cd-indiegogo {
+    position: absolute;
+    @include center(x);
+    bottom: 0px;
+    margin-bottom: -6px;
+    width: 100%;
+    max-width: $M;
+    text-align: center;
+    color: $color-4;
+    z-index: 10000;
+      @include MQ(M) {
+        bottom: 0px;
+      }
+  }
+
   .cd-referral {
+    display: none;
     position: absolute;
     @include center(x);
     bottom: $margin-vertical-large;
@@ -240,7 +256,6 @@ Main components
       @include MQ(M) {
         bottom: $margin-vertical-large;
       }
-
     h3 {
       color: $color-4;
       @include MQ(M) {
